@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+route::get('/', 'ProjectController@welcome');
+route::resource('projects', 'ProjectController');
+
+route::patch('/tasks/{task}', 'ProjectTasksController@update');
+route::get('/projects/create', 'ProjectController@create');
+route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
