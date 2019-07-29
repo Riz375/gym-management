@@ -18,6 +18,7 @@ class ProjectTasksController extends Controller
 
         return back();  
     }
+   
 
     public function update(Task $task)
     {

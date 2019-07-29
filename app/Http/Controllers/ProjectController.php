@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Project;
+use App\Task;
 use App\events\ProjectCreated;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreNewProjectRequest;
@@ -24,7 +25,7 @@ class projectController extends Controller
     }
     public function edit(Project $project)
     {
-        return view('projects.create', compact('project'));
+        return view('projects.edit', compact('project'));
     }
     
     public function index()
@@ -44,11 +45,13 @@ class projectController extends Controller
         return redirect('/projects');
 
     }
-    public function destroy(Project $project)
+    public function destroy(Project $project, Task $task)
     {
+       
+        $project->tasks()->delete();
         $project->delete();
-
-        return redirects('projects');
+        
+        return redirect('/projects');
     }
     public function store(StoreNewProjectRequest $request)
     {

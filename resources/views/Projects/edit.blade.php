@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="title"> Edit Projects</h1>
+<h1> Edit Projects</h1>
 <form method ="POST" action="/projects/{{$project->id}}">
     @method('PATCH')
     @csrf()
@@ -25,6 +25,8 @@
         </div>
     </div>
 </form>
+
+
 <form method ="POST" action="/projects/{{$project->id}}">
     @method('DELETE')
     @csrf()

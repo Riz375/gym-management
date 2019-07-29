@@ -39,4 +39,5 @@
 <p>
     <a href="/projects/{{$project->id}}/edit">Edit</a>
 </p>
+
 @endsection

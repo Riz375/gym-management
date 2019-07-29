@@ -92,7 +92,7 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>  --}}
-                    <a href ="/projects/index">view projects</a>
+                    <a href ="/projects">view projects</a>
                     <a href ="/projects/create">Create projects</a>
                 </div>
             </div>

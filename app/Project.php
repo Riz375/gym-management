@@ -29,4 +29,11 @@ class Project extends Model
             'description' => $description
         ]);
     }
+    public function deleteTask($description)
+    {
+        return Task::delete()([
+            'project_id' => $this->id,
+            'description' => $description
+        ]);
+    }
 }
