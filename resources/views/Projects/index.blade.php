@@ -2,15 +2,37 @@
 
 @section('content')
 <h1> Projects </h1>
-<ul>
+{{--  <div style="display: flex; align-items: center; padding: 2;">
+    <h1 style="margin-right: auto;">"Jim's Gym"</h1>  --}}
+<div class="Flex items-center mb-3">
+    <a href="/projects/create">New Project</a>
+</div>
+
+<div class="flex">
+    @forelse ($projects as $project)
+    <div class="bg-white p-2 rounded shadow W-1/3">
+    
+        <h3>
+            <a href="/projects/{{$project->id}}">
+            {{ $project->title }}
+            </a>
+        </h3>
+
+        <div>{{ $project->description }}</div>
+    </div>
+    <br>
+    @empty 
+        <div>No Projects Yet.</div>
+    @endforelse
+</div>
+
+{{--  <ul>
     @foreach ($projects as $project)
         <li>
-            <a href="/projects/{{$project->id}}">
-                {{ $project->title }}
-            </a>
+            
         </li>
     @endforeach
-</ul>
+</ul>  --}}
 <a href="/">
 <p>Welcome Page</p>
 </a>

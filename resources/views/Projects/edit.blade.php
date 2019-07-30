@@ -2,6 +2,7 @@
 
 @section('content')
 <h1> Edit Projects</h1>
+<a href="/projects">Back</a>
 <form method ="POST" action="/projects/{{$project->id}}">
     @method('PATCH')
     @csrf()
