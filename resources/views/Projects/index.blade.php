@@ -10,7 +10,7 @@
 
 <div class="flex">
     @forelse ($projects as $project)
-    <div class="bg-white p-2 rounded shadow W-1/3">
+    <div class="bg-white mr-3 p-2 rounded shadow w-1/3" style="height: 200px">
     
         <h3>
             <a href="/projects/{{$project->id}}">
