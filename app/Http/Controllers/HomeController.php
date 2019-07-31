@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        \
+        Log::debug('sick m8');
+        
         return view('home');
     }
 }
