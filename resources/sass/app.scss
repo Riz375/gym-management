@@ -1,14 +1,42 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
-@import "tailwindcss/base";
+
+/* @import "tailwindcss/base";
 
 @import "tailwindcss/components";
 
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities"; */
+
+@tailwind utilities;
+
+@tailwind base;
+
+@tailwind components;
+
+/* h1, h2, h3, h4, h4, h6{
+    font-size:25px;
+} */
+h1{
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+button{
+    background-color: grey;
+    border:1px solid black;
+}
+.project_title{
+    font-size: 25px;
+}
+a.project_title:hover{
+
+    text-decoration:underline;
+    
+    color:blue;
+}
+a:hover{
+    text-decoration: underline;
+}
