@@ -3,24 +3,30 @@
 @section('content')
 
 <h1> Projects </h1>
-{{--  <div style="display: flex; align-items: center; padding: 2;">
-    <h1 style="margin-right: auto;">"Jim's Gym"</h1>  --}}
-<div class="Flex items-center mb-3">
-    <a href="/projects/create">New Project</a>
+
+<br>
+<header class="Flex items-center mb-3 py-4">
+    <a href="/projects/create" style="color: grey"class="no-underline">Create a New Project</a>
+</header>
+<br>
+<div class="introBox">
+    <p> Below are the Projects that have been created, click on a project title to find out more details. </p>
 </div>
     
-<div class="flex">
+<div class="flex flex-wrap ">
     @forelse ($projects as $project)
-    <div class="bg-white mr-3 p-2 rounded shadow w-1/3" style="height: 200px">
-    
-        <h3>
-            <a class="project_title"href="/projects/{{$project->id}}">
-            {{ $project->title }}
-            </a>
-        </h3>
+    <div class="w-1/3 px-3 pb-6 -mx-3">
+        <div class="bg-white p-5 rounded shadow" style="height: 200px">
+        
+            <h3 class="font-normal text-xl py-4">
+                <a class="project_title"href="/projects/{{$project->id}}">
+                {{ $project->title }}
+                </a>
+            </h3>
 
-        <div>{{ $project->description }}</div>
-    </div>
+            <div style ="color: grey">{{ str_limit($project->description), 100 }}</div>
+        </div>
+    </div>    
     <br>
     @empty 
         <div>No Projects Yet.</div>

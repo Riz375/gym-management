@@ -5,7 +5,7 @@
 
 <div class="content">{{$project->description}}</div>
 
-<a href="/welcome">Back to Home</a>
+<a href="/">Back to Home</a>
 @if ($project->tasks->count())
     <div>
         @foreach ($project->tasks as $task)
