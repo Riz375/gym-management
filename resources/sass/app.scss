@@ -24,9 +24,22 @@ h1{
     text-decoration: underline;
     font-weight: bold;
 }
-button{
-    background-color: grey;
+
+/* a.button{
+    background-color: cyan;
     border:1px solid black;
+    color: white;
+    box-shadow: 0 2px 7px 0 #b0eaff; 
+    padding-right:2.5;
+    padding-left: 2.5;
+    padding-top: 1;
+    padding-bottom: 1;
+    text-decoration: underline;
+
+    @apply .bg-blue .text-white .no-underline .rounded-lg .text-md .py-2 .px-5 ;
+} */
+a.button_style:hover {background-color: red;
+text-decoration: none;
 }
 .project_title{
     font-size: 25px;
