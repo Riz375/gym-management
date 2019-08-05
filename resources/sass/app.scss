@@ -1,14 +1,66 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
-@import "tailwindcss/base";
+
+/* @import "tailwindcss/base";
 
 @import "tailwindcss/components";
 
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities"; */
+
+@tailwind utilities;
+
+@tailwind base;
+
+@tailwind components;
+
+/* h1, h2, h3, h4, h4, h6{
+    font-size:25px;
+} */
+h1{
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* a.button{
+    background-color: cyan;
+    border:1px solid black;
+    color: white;
+    box-shadow: 0 2px 7px 0 #b0eaff; 
+    padding-right:2.5;
+    padding-left: 2.5;
+    padding-top: 1;
+    padding-bottom: 1;
+    text-decoration: underline;
+
+    @apply .bg-blue .text-white .no-underline .rounded-lg .text-md .py-2 .px-5 ;
+} */
+a.button_style:hover {background-color: red;
+text-decoration: none;
+}
+.project_title{
+    font-size: 25px;
+}
+.project_description{
+    font-size: 15px;
+   
+}
+.introBox{
+    clear: both;
+    text-align: center;
+    border: 3px solid black;
+    padding: 15px;
+    background-color: white;
+    }
+a.project_title:hover{
+
+    text-decoration:underline;
+    
+    color:blue;
+}
+a:hover{
+    text-decoration: underline;
+}
