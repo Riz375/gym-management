@@ -14,7 +14,7 @@
     <p> Below are the Projects that have been created, click on a project title to find out more details. </p>
 </div>
     
-<div class="lg:flex lg:flex-wrap -mx-3">
+<div class="lg:flex lg:flex-wrap -mx-3 mt-3">
     @forelse ($projects as $project)
     <div class="lg:w-1/3 px-3 pb-6">
         <div class="bg-white pb-5 pl-5 rounded-lg shadow" style="height: 200px">
@@ -25,7 +25,7 @@
                 </a>
             </h3>
 
-            <div style ="color: grey"class="">{{ str_limit($project->description), 100 }}</div>
+            <div style ="color: grey"class="pr-4">{{ str_limit($project->description), 100 }}</div>
         </div>
     </div>    
     <br>
