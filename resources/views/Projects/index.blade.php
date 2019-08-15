@@ -16,8 +16,8 @@
     
 <div class="project-list">
     @forelse ($projects as $project)
-    <div class="">
-        <div class="bg-white pb-5 rounded-lg shadow" style="height: 200px">
+    <div class="my-3;">
+        <div class="bg-white pb-5 mr-15-pr-48px rounded-lg shadow" style="height: 200px;">
             <h3 style="background-image: linear-gradient(lime, white);" class="font-normal text-xl py-4 mb-3  pl-4 pr-4">
                 <a class="project_title text-black no-underline"href="/projects/{{$project->id}}">
                 {{ $project->title }}
