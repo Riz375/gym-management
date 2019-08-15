@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+<head style = "background-image: linear-gradient(White,White,lime);">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title style = " style ="background-image: linear-gradient(White, cyan, white); "">{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,9 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-grey-light">
+<body style = "background-image: linear-gradient(White,White,White,White,lime);">
     <div id="app">
-        <nav class="bg-white">
+        <nav style ="box-shadow: 0 2px 7px 0 lime;">
             <div class="container mx-auto">
                 <div class="flex justify-between items-center py-2">
                     <h1>
