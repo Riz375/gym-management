@@ -6,7 +6,7 @@
     <div class="lg:w-1/3 px-3 pb-6">
         <div class="card bg-white rounded-lg shadow" style="width: 25rem;">
             <div class="lg:card-body">
-                <form method ="POST" action="/projects">
+                <form method ="POST" action="/projects" >
                     @csrf()
         
                     <div style="background-image: linear-gradient(lime, white);" class="font-normal text-xl py-4 mb-3  pl-4 pr-4">
@@ -25,7 +25,7 @@
                     <div >
                         <div class="field p-4">
                             <div class="control">
-                                <button style="background-image: linear-gradient(white,lime,lime, white);" type="submit" class = "button is-link button_style no-underline py-2 px-5 rounded-lg text-md text-white">Update Project</button>
+                                <button type="submit" class = "button is-link button_style no-underline py-2 px-5 rounded-lg text-md text-white">Create project</button>
                             </div>
                         </div>
                     </div>
@@ -34,5 +34,5 @@
         </div>
     </div>
 </div>
-
+<script src="{{ mix('/js/app.js') }}"></script>
 @endsection

@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style = "background-image: linear-gradient(White,White,White,White,lime);">
+<body style = "background-image: linear-gradient(White,White,White,White,lime);min-height: 100vh;">
     <div id="app">
         <nav style ="box-shadow: 0 2px 7px 0 lime;">
             <div class="container mx-auto">
