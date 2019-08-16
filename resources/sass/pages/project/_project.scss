@@ -1,0 +1,40 @@
+.project-list{
+    /*  @include side-by-side-elements; */
+    $perRow: 4;
+    $columnSpace: 15px;
+    max-height: 5000px; /* height given for illustration */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-right: -15px;
+
+
+    // applies to all immediate children regardless of their element type e.g. div, p, h1-6 etc
+    & > * {
+        margin-bottom: 15px;
+        /* width: calc(100% / #{$perRow} - #{$columnSpace}); */
+        flex: 0 1 calc(100% / #{$perRow}  - #{$columnSpace});
+        margin-right: 15px;
+
+        @include media-breakpoint-down(xl) {
+            /* width: calc(100% / 3 - #{$columnSpace}); */
+            flex: 0 1 calc(100% / 3  - #{$columnSpace});
+            justify-content: flex-start;
+            margin-right: 15px;
+        }
+        @include media-breakpoint-down(md) {
+            /* width: calc(100% / 2 - #{$columnSpace}); */
+            flex: 0 1 calc(100% / 2  - #{$columnSpace});
+            justify-content: flex-start;
+            margin-right: 15px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex: 0 1 calc(100%);
+            justify-content: center;
+            margin-right: 15px;
+            
+        }
+    }
+}
