@@ -1,0 +1,24 @@
+@mixin side-by-side-elements($perRow: 4, $columnSpace: 15px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // margin-bottom: -$columnSpace;
+   //  margin-left: -$columnSpace;
+    margin-right: -10px; 
+
+    // applies to all immediate children regardless of their element type e.g. div, p, h1-6 etc
+    & > * {
+        margin-bottom: $columnSpace;
+        width: calc(100% / #{$perRow} - #{$columnSpace});
+
+        @include media-breakpoint-down(md) {
+            width: calc(100% / 3 - #{$columnSpace});
+            justify-content: space-between;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+}
